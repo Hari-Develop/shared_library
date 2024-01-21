@@ -1,10 +1,12 @@
 pipeline {
-    agent any  // Run on any available agent
+    agent {
+        node { label 'workstation' }
+    }
     stages {
         stage('Build') {
             steps {
                 echo 'Building the application...'
-                // Add build commands here (e.g., Maven, Gradle)
+
             }
         }
         stage('Test') {
